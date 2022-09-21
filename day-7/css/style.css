@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/*  #0d47a1 #42a5f5 */
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  background: linear-gradient(145deg, #0d47a1, #42a5f5);
+  height: 70vh;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
+  color: white;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.header-nav nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.header-nav nav ul li {
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.header-nav nav ul li:hover {
+  background-color: rgb(66, 165, 245, 0.2);
+}
+
+.header-img img {
+  height: 30px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.container .body {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+}
+
+.container .body .logo {
+  background-image: url('../img/angular.svg');
+  height: 400px;
+  width: 400px;
+}

@@ -3,135 +3,67 @@
   padding: 0;
 }
 
+/*  #0d47a1 #42a5f5 */
+
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
-.main {
-  background-image: linear-gradient(
-      to right bottom,
-      rgb(106, 211, 58, 0.8),
-      rgb(101, 60, 237, 0.8)
-    ),
-    url('../img/hero.jpg');
-  height: 95vh;
+.main-container {
+  height: 80vh;
+  background: linear-gradient(154deg, #0d47a1, #42a5f5);
+  color: white;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
+}
+
+.top-header {
+  display: flex;
+  padding: 10px 20px;
+  align-items: center;
+  color: white;
+}
+
+.header-nav ul {
+  list-style: none;
+  display: flex;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.header-nav ul li {
+  padding: 10px;
+}
+
+.header-nav ul li:hover {
+  background-color: rgba(66, 164, 245, 0.2);
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
+.header-item1 {
+  padding: 0px 20px 0px 0px;
+}
+
+.header-item1 img {
+  height: 40px;
+}
+
+.main-content {
+  height: calc(100% - 64px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-logo {
+  background-image: url('../img/angular.svg');
   background-size: cover;
   background-position: top;
-  position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  height: 500px;
+  width: 500px;
+  z-index: 100;
 }
 
-.logo {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
-
-.img {
-  height: 20px;
-}
-
-.heading {
-  color: white;
-  text-transform: uppercase;
-  position: absolute;
-  left: 50%;
-  top: 40%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-.heading-main {
-  display: block;
-  font-size: 60px;
-  letter-spacing: 35px;
-  font-weight: 700px;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-}
-
-.heading-sub {
-  display: block;
-  font-size: 15px;
-  letter-spacing: 12.5px;
-  font-weight: 400;
-  animation: moveInRight 1s ease-in-out;
-}
-
-.btn-white {
-  background-color: white;
-  color: #777;
-}
-
-.heading-primary {
-  padding-bottom: 40px;
-}
-
-.btn:link,
-.btn:visited {
-  padding-top: 40px;
-  text-decoration: none;
-  padding: 15px 60px;
-  display: inline-block;
-  border-radius: 100px;
-  transition: all 0.2s;
-  animation: moveInBottom 1s ease-in-out 1s;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgb(0, 0, 0, 0.2);
-}
-
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgb(0, 0, 0, 0.2);
-}
-
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-20%);
-  }
-
-  80% {
-    transform: translateX(20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(20%);
-  }
-
-  80% {
-    transform: translateX(-20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(20%);
-  }
-
-  80% {
-    transform: translateY(-20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
+.main-body {
+  font-size: 36px;
+  line-height: 90px;
 }
